@@ -1,0 +1,109 @@
+.news-item {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 1px 1px 30px 0 #ECECEF;
+  overflow: hidden;
+
+  @include desktop {
+    width: 292px;
+    border: 2px solid #f3f3f3;
+
+    &:hover,
+    &:focus {
+      border: 2px solid rgba(45, 120, 232, 0.7);
+    }
+
+    &:hover .news-item__title,
+    &:focus .news-item__title {
+      color: $theme-color;
+    }
+  }
+}
+
+.news-item__link {
+  display: flex;
+  text-decoration: none;
+
+  @include desktop {
+    flex-direction: column;
+  }
+}
+
+.news-item__picture {
+  flex-shrink: 0;
+}
+
+.news-item__content {
+  position: relative;
+  padding: 24px 16px 16px;
+
+  @include desktop {
+    margin-bottom: 5px;
+  }
+}
+
+.news-item__title {
+  margin: 0 0 13px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+.news-item__desc {
+  display: none;
+  margin: 0;
+
+  @include desktop {
+    display: block;
+    margin-bottom: 23px;
+  }
+}
+
+.news-item__read-more {
+  position: relative;
+  display: block;
+  margin: 0;
+  font-weight: 600;
+  text-decoration: none;
+  color: $theme-color;
+
+  & span {
+    position: relative;
+    padding-right: 20px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      right: 0;
+      width: 15px;
+      height: 14px;
+      background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABN2lDQ1BBZG9iZSBSR0IgKDE5OTgpAAAokZWPv0rDUBSHvxtFxaFWCOLgcCdRUGzVwYxJW4ogWKtDkq1JQ5ViEm6uf/oQjm4dXNx9AidHwUHxCXwDxamDQ4QMBYvf9J3fORzOAaNi152GUYbzWKt205Gu58vZF2aYAoBOmKV2q3UAECdxxBjf7wiA10277jTG+38yH6ZKAyNguxtlIYgK0L/SqQYxBMygn2oQD4CpTto1EE9AqZf7G1AKcv8ASsr1fBBfgNlzPR+MOcAMcl8BTB1da4Bakg7UWe9Uy6plWdLuJkEkjweZjs4zuR+HiUoT1dFRF8jvA2AxH2w3HblWtay99X/+PRHX82Vun0cIQCw9F1lBeKEuf1UYO5PrYsdwGQ7vYXpUZLs3cLcBC7dFtlqF8hY8Dn8AwMZP/fNTP8gAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAUVaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0OCA3OS4xNjQwMzYsIDIwMTkvMDgvMTMtMDE6MDY6NTcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4wIChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMDMtMjdUMTU6MTg6MzcrMDM6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTAzLTI3VDE1OjIxOjUyKzAzOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTAzLTI3VDE1OjIxOjUyKzAzOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9IkFkb2JlIFJHQiAoMTk5OCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6YmU2OTZjMTQtMGVjMS0yNDQ0LTg2YWYtMGYyZTU0YmM2MzBjIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOmJlNjk2YzE0LTBlYzEtMjQ0NC04NmFmLTBmMmU1NGJjNjMwYyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmJlNjk2YzE0LTBlYzEtMjQ0NC04NmFmLTBmMmU1NGJjNjMwYyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YmU2OTZjMTQtMGVjMS0yNDQ0LTg2YWYtMGYyZTU0YmM2MzBjIiBzdEV2dDp3aGVuPSIyMDIwLTAzLTI3VDE1OjE4OjM3KzAzOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjEuMCAoV2luZG93cykiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+xjEfOAAAAM1JREFUOI3F0z1Kg0EUheEnIVqITarpBDcwjbgFg43YBkTcguWsYBbgAiws7MVKsoop3MNUQRDFH/isIkbUTIzgbc+9h5fDub2u66wy/ZWu/8JgsGghpnqMQ4xLDk+/IbjEM65iqhtLG5QcXnCEiuuY6uayBEoOrzjBLSYx1eFMe88gpnqKsMDrHlu4we6cAR4xbQCaC7LXWqSYah9n2MF+yWH6meCn4wHOsY1RyeFuprX0YA0XGGKv5PDwUW8hGGMdB18VqTmD7+b/n+kN6gg3DHTu2ZEAAAAASUVORK5CYII=');
+    
+      @include tablet {
+        top: 3px;
+      }
+    }
+  }
+
+  @include mobile-only {
+    position: absolute;
+    right: 24px;
+    bottom: 15px;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  @include tablet {
+    right: 0;
+    bottom: 0;
+  }
+
+  @include desktop {
+    text-align: center;
+  }
+}

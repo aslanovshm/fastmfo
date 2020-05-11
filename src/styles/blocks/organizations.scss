@@ -1,0 +1,37 @@
+.organizations {
+  padding-top: 28px;
+  padding-bottom: 24px;
+
+  @include desktop {
+    padding-top: 36px;
+    padding-bottom: 43px;
+  }
+}
+
+.organizations__inner {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.organizations__heading {
+  margin-bottom: 12px;
+
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+
+.organizations__item {
+  margin-bottom: 8px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 25px;
+  }
+}

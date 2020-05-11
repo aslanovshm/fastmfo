@@ -1,0 +1,17 @@
+.offers {
+  padding-top: 12px;
+  padding-bottom: 24px;
+
+  @include tablet {
+    padding-top: 6px;
+    padding-bottom: 35px;
+  }
+}
+
+.offers__item {
+  margin-bottom: 8px;
+
+  @include tablet {
+    margin-bottom: 14px;
+  }
+}

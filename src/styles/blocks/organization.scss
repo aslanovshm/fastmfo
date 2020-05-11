@@ -1,0 +1,80 @@
+.organization {
+  padding-bottom: 5px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px 0 #ECECEF;
+  overflow: hidden;
+
+  @include tablet {
+    width: 290px;
+  }
+
+  @include desktop {
+    width: 454px;
+  }
+}
+
+.organization__title {
+  margin: 0;
+  padding: 16px 12px;
+  font-size: 11px;
+  line-height: 17px;
+  text-decoration: underline;
+  background-color: #d5e4fa;
+
+  @include desktop {
+    padding: 16px 100px 16px 24px;
+  }
+
+  & span {
+    font-size: 14px;
+  }
+}
+
+.organization__link {
+  text-decoration: none;
+
+  &:hover .organization__title {
+    color: $theme-color;
+  }
+}
+
+.organization__content {
+  width: 100%;
+  font-size: 11px;
+  line-height: 20px;
+  font-weight: 600;
+  border-collapse: collapse;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  & th,
+  & td {
+    padding: 4px 0;
+  }
+
+  & th {
+    padding-left: 10px;
+    text-align: left;
+    color: #6E798C;
+    border-bottom: 2px solid #F5F7F9;
+
+    @include desktop {
+      width: 100px;
+      padding-left: 25px;
+    }
+  }
+
+  & td {
+    padding-left: 10px;
+    color: #081F32;
+    border-bottom: 2px solid #F5F7F9;
+  }
+
+  & tr:last-child th,
+  & tr:last-child td {
+    border: none;
+  }
+}

@@ -1,0 +1,32 @@
+@import "constants.scss";
+@import "mixins.scss";
+
+@import "normalize.scss";
+@import "common.scss";
+@import "visually-hidden.scss";
+@import "fonts.scss";
+
+@import "blocks/inner.scss";
+@import "blocks/heading.scss";
+@import "blocks/logo.scss";
+@import "blocks/breadcrumbs.scss";
+
+@import "blocks/header.scss";
+@import "blocks/intro.scss";
+@import "blocks/offers.scss";
+@import "blocks/offer.scss";
+@import "blocks/news.scss";
+@import "blocks/news-item.scss";
+@import "blocks/organizations.scss";
+@import "blocks/organization.scss";
+@import "blocks/faq.scss";
+@import "blocks/post.scss";
+@import "blocks/single-news.scss";
+@import "blocks/footer.scss";
+
+@import "blocks/popup.scss";
+@import "blocks/modal.scss";
+@import "blocks/overlay.scss";
+@import "blocks/offer-special.scss";
+
+@import "blocks/sr-only.scss";
